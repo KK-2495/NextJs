@@ -1,14 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
+import style from "../app/styles/next.module.css";
+import style1 from "../app/styles/next1.module.css";
+import style2 from "../app/styles/next2.module.css";
+
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <div className="none w-96 sm:w-60">
-        <ul className="flex justify-between">
-          <Link href="/users/home"><li>Home</li></Link>
-          <Link href="/users/about"><li>About</li></Link>
-          <Link href="/users/contact"><li>Contact</li></Link>
+        <ul className="flex justify-between p-5">
+          <Link href="/users/home"><li className={style2.home}>Home</li></Link>
+          <Link href="/users/about"><li className={style2.about}>About</li></Link>
+          <Link href="/users/contact"><li className={style2.contact}>Contact</li></Link>
         </ul>
         </div>
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
